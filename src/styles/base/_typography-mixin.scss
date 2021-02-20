@@ -1,0 +1,15 @@
+@function rem-calc($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size, $line-height: $size) {
+  font-size: rem-calc($size);
+  line-height: $line-height;
+}
+
+@mixin font($family, $weight, $size, $line-height: $size) {
+  font-family: $family;
+  font-weight: $weight;
+  @include font-size($size, $line-height);
+}

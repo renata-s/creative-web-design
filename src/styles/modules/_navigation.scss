@@ -21,10 +21,13 @@
   }
 
   &__link {
-    color: $color-white;
-    font-family: $Commissioner;
-    font-size: 16px;
-    font-weight: 400;
+    @include font($Commissioner, 400, 16, 1.5);
+
     text-decoration: none;
+    color: $color-white;
+  }
+
+  &__button {
+    @include button($color-white, $color-dark-grey);
   }
 }

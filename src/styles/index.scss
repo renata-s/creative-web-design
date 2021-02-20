@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 @import 'base/colors';
-@import 'base/customFonts';
+@import 'base/custom-fonts';
+@import 'base/typography-mixin';
+@import 'base/button';
 @import 'modules/header';
 @import 'modules/navigation';
 

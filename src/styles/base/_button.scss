@@ -1,0 +1,8 @@
+@mixin button($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  width: 199px;
+  height: 64px;
+  border: none;
+  @include font($Commissioner, 800, 16, 1.5);
+}
