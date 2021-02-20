@@ -14,6 +14,7 @@
     display: flex;
     list-style: none;
     padding-left: 69px;
+    position: relative;
   }
 
   &__item {
@@ -23,11 +24,56 @@
   &__link {
     @include font($Commissioner, 400, 16, 1.5);
 
-    text-decoration: none;
     color: $color-white;
+    padding: 10px 4px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 600;
+    }
+
+    &::before,
+    &:visited::before,
+    &::after,
+    &:visited::after {
+      background-color: $color-white;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+      width: 100%;
+    }
+
+    &:hover::before,
+    &:active::before,
+    &:hover::after,
+    &:active::after {
+      transform: scaleX(1);
+    }
+
+    &:hover::before,
+    &:visited::before {
+      top: 0;
+      transform-origin: left;
+    }
+
+    &:hover::after,
+    &:visited::after {
+      bottom: 0;
+      transform-origin: right;
+    }
   }
 
   &__button {
     @include button($color-white, $color-dark-grey);
+
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(120%);
+    }
   }
 }
