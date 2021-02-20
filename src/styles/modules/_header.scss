@@ -7,6 +7,7 @@
   &__content {
     align-items: center;
     display: flex;
+    height: 100%;
     justify-content: space-between;
     max-width: 1440px;
     width: 100%;
@@ -14,6 +15,10 @@
 
   &__logo {
     margin-left: 165px;
+
+    @include mq-between(768, 1100) {
+      margin: 0 130px 0 39px;
+    }
   }
 
   &__logo-img {

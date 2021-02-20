@@ -3,31 +3,44 @@
   background-color: $color-red;
   display: flex;
   flex-direction: row;
-  height: 178px;
+  height: inherit;
   list-style: none;
   margin: 0;
   max-width: 705px;
   padding: 0;
   width: 100%;
 
-  &__list {
-    display: flex;
-    list-style: none;
-    padding-left: 69px;
-    position: relative;
+  @include mq-between(768, 1100) {
+    max-width: 500px;
+    width: 100%;
   }
 
-  &__item {
-    margin-right: 32px;
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 0 0 69px;
+    position: relative;
+    width: inherit;
+    padding: 0;
+
+    @include mq-between(768, 1100) {
+      margin: 0 0 0 33px;
+    }
   }
 
   &__link {
     @include font($Commissioner, 400, 16, 1.5);
 
     color: $color-white;
+    margin-right: 32px;
     padding: 10px 4px;
     position: relative;
     text-decoration: none;
+
+    @include mq-between(768, 1100) {
+      margin-right: 20px;
+    }
 
     &:hover {
       font-weight: 600;
@@ -69,6 +82,15 @@
 
   &__button {
     @include button($color-white, $color-dark-grey);
+
+    margin-left: 15px;
+    padding: 0;
+
+    @include mq-between(768, 1100) {
+      width: 147px;
+      height: 64px;
+      margin: 0;
+    }
 
     cursor: pointer;
 
