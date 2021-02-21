@@ -50,7 +50,7 @@
         position: absolute;
         top: 110px;
         width: 100%;
-        z-index: 1;
+        z-index: 5;
       }
     }
   }
@@ -120,7 +120,7 @@
   }
 
   &__button {
-    @include button($color-white, $color-dark-grey);
+    @include button($color-white, $color-black);
 
     cursor: pointer;
     margin-left: 15px;
@@ -138,7 +138,7 @@
     }
 
     &:hover {
-      filter: brightness(120%);
+      background-color: $color-dark-grey;
     }
   }
 }
