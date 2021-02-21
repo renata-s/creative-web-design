@@ -7,6 +7,11 @@
     max-width: 1440px;
     position: relative;
     width: 100%;
+
+    @include mq-until(768) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -18,11 +23,12 @@
     z-index: 3;
 
     @include mq-between(768, 1100) {
-      background-color: $color-white;
-      height: 606px;
-      max-width: 330px;
       padding-top: 77px;
-      width: 100%;
+    }
+
+    @include mq-until(768) {
+      padding: 0 24px 0 24px;
+      position: relative;
     }
   }
 
@@ -38,6 +44,15 @@
 
       margin: 0 0 19px 39px;
       width: 400px;
+    }
+
+    @include mq-until(768) {
+      @include font($Commissioner, 800, 40, 1);
+
+      margin: 0;
+      max-width: 327px;
+      padding: 56px 0 15px 0;
+      width: 100%;
     }
   }
 
@@ -55,6 +70,10 @@
       margin: 0 0 0 39px;
       width: 400px;
     }
+
+    @include mq-until(768) {
+      margin: 0;
+    }
   }
 
   &__button {
@@ -66,6 +85,10 @@
 
     @include mq-between(768, 1100) {
       margin: 32px 0 0 39px;
+    }
+
+    @include mq-until(768) {
+      margin: 40px 0 96px 0;
     }
 
     &:hover {
@@ -84,6 +107,11 @@
     @include mq-between(768, 1100) {
       left: 70px;
     }
+
+    @include mq-until(768) {
+      order: -1;
+      position: relative;
+    }
   }
 
   &__image {
@@ -93,6 +121,12 @@
     @include mq-between(768, 1100) {
       height: 606px;
       right: 50px;
+    }
+
+    @include mq-until(768) {
+      margin: 0;
+      max-width: 770px;
+      width: 100%;
     }
   }
 }
