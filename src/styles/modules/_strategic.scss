@@ -13,27 +13,53 @@
 
   &__content {
     background-color: $color-black;
-    padding: 200px 141px 200px 154px;
-  }
-
-  &__title {
-    margin: 0;
-  }
-
-  &__text {
-    margin: 0;
-  }
-
-  &__image {
+    padding: 200px 30px 200px 154px;
+    width: 100%;
+    max-width: 705px;
     position: relative;
   }
 
-  &__wave {
-    position: absolute;
+  &__title {
+    @include font($Commissioner, 800, 55, 1.14);
+
+    color: $color-white;
+    margin: 0 0 43px;
+    padding-right: 200px;
+
+    &--first {
+      color: $color-red;
+    }
+  }
+
+  &__text {
+    @include font($Commissioner, 400, 18, 1.78);
+
+    color: $color-white;
+    margin: 0 106px 48px 0;
+  }
+
+  &__image-container {
+    width: 100%;
+    max-width: 735px;
+    position: relative;
+  }
+
+  &__button {
+    @include button($color-red, $color-black);
+
+    font-size: 18px;
+    font-size: 800;
+    text-align: left;
+
+    &--text {
+      border-bottom: 2px solid $color-red;
+      padding-bottom: 8px;
+    }
   }
 
   &__wave-image {
-    display: block;
-    margin-left: auto;
+    position: absolute;
+    top: 250px;
+    right: 350px;
   }
 }
