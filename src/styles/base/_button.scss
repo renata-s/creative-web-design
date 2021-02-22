@@ -2,6 +2,7 @@
   background-color: $background-color;
   border: none;
   color: $color;
+  cursor: pointer;
   height: 64px;
   width: 199px;
   @include font($Commissioner, 700, 16, 1.5);
