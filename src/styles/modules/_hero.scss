@@ -32,6 +32,7 @@
     }
 
     @include mq-until(768) {
+      background-color: $color-white;
       padding: 0 24px;
       position: relative;
     }
