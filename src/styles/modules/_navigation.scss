@@ -139,6 +139,9 @@
 
     &:hover {
       background-color: $color-dark-grey;
+      @include mq-until(768) {
+        background-color: $color-light-red;
+      }
     }
   }
 }
