@@ -19,25 +19,29 @@
     background-color: $color-black;
     box-sizing: border-box;
     max-width: 705px;
-    padding: 200px 0 0 154px;
+    padding: 200px 106px 0 154px;
     position: relative;
     width: 100%;
 
+    @include mq-until(1400) {
+      max-width: 800px;
+      width: 100%;
+    }
+
     @include mq-between(1200, 1400) {
-      padding: 150px 0 0 40px;
+      padding: 150px 100px 0 40px;
     }
 
     @include mq-between(992, 1200) {
-      padding: 120px 0 0 69px;
+      padding: 120px 80px 0 69px;
     }
 
     @include mq-between(768, 992) {
-      padding: 50px 0 0 40px;
+      padding: 50px 50px 0 40px;
     }
 
     @include mq-until(768) {
       padding: 0 24px 72px;
-      width: 100%;
     }
   }
 
@@ -65,20 +69,18 @@
     @include font($Commissioner, 400, 18, 1.78);
 
     color: $color-white;
-    margin: 0 30px 48px 0;
+    margin: 0 0 48px 0;
     max-width: 445px;
     width: 100%;
 
     @include mq-between(992, 1200) {
-      max-width: 400px;
-      padding-right: 30px;
+      max-width: 350px;
       width: 100%;
     }
 
     @include mq-until(992) {
       font-size: 15px;
-      margin: 0;
-      margin-bottom: 32px;
+      margin: 0 0 32px 0;
     }
   }
 
@@ -96,8 +98,7 @@
     }
 
     @include mq-until(768) {
-      height: auto;
-      max-width: 800px;
+      max-width: 770px;
       width: 100%;
     }
   }
@@ -118,5 +119,11 @@
         color: $color-light-red;
       }
     }
+  }
+
+  &__wave {
+    left: -70px;
+    position: absolute;
+    top: 250px;
   }
 }
