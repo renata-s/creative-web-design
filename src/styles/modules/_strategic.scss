@@ -15,6 +15,25 @@
     }
   }
 
+  &__image {
+    @include mq-between(1200, 1400) {
+      width: 600px;
+    }
+
+    @include mq-between(992, 1200) {
+      width: 500px;
+    }
+
+    @include mq-between(768, 992) {
+      width: 400px;
+    }
+
+    @include mq-until(768) {
+      max-width: 770px;
+      width: 100%;
+    }
+  }
+
   &__content {
     background-color: $color-black;
     box-sizing: border-box;
@@ -29,7 +48,7 @@
     }
 
     @include mq-between(1200, 1400) {
-      padding: 150px 100px 0 40px;
+      padding: 150px 100px 0 100px;
     }
 
     @include mq-between(992, 1200) {
@@ -50,14 +69,20 @@
 
     color: $color-white;
     margin: 0 0 43px;
+    max-width: 445px;
     padding-right: 200px;
+    width: 100%;
 
-    @include mq-until(992) {
+    @include mq-between(768, 1100) {
+      font-size: 45px;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    @include mq-until(768) {
       font-size: 30px;
       margin: 0;
-      max-width: 350px;
       padding: 72px 0 24px;
-      width: 100%;
     }
 
     &--first {
@@ -70,35 +95,23 @@
 
     color: $color-white;
     margin: 0 0 48px 0;
-    max-width: 445px;
-    width: 100%;
 
-    @include mq-between(992, 1200) {
+    @include mq-between(992, 1100) {
       max-width: 350px;
       width: 100%;
     }
 
-    @include mq-until(992) {
+    @include mq-between(768, 992) {
       font-size: 15px;
       margin: 0 0 32px 0;
-    }
-  }
-
-  &__image {
-    @include mq-between(1200, 1400) {
-      width: 700px;
-    }
-
-    @include mq-between(992, 1200) {
-      width: 500px;
-    }
-
-    @include mq-between(768, 992) {
-      width: 400px;
+      max-width: 300px;
+      width: 100%;
     }
 
     @include mq-until(768) {
-      max-width: 770px;
+      font-size: 15px;
+      margin: 0 0 32px 0;
+      max-width: 400px;
       width: 100%;
     }
   }
@@ -125,5 +138,27 @@
     left: -70px;
     position: absolute;
     top: 250px;
+
+    @include mq-between(1200, 1400) {
+      top: 200px;
+    }
+
+    @include mq-between(992, 1200) {
+      left: -50px;
+      top: 170px;
+      width: 100px;
+    }
+
+    @include mq-between(768, 992) {
+      left: -40px;
+      top: 90px;
+      width: 70px;
+    }
+
+    @include mq-until(768) {
+      left: 24px;
+      top: -14px;
+      width: 70px;
+    }
   }
 }
