@@ -10,9 +10,9 @@
     width: 100%;
 
     @include mq-until(768) {
+      background-color: $color-red;
       display: flex;
       flex-direction: column;
-      background-color: $color-red;
     }
   }
 
@@ -41,8 +41,8 @@
     }
 
     @include mq-until(768) {
-      padding: 0 24px 96px;
       margin-top: 309px;
+      padding: 0 24px 96px;
     }
   }
 
@@ -76,11 +76,11 @@
     }
 
     @include mq-until(768) {
-      padding: 96px 24px 0;
-      font-size: 32px;
       color: $color-white;
-      width: 100%;
+      font-size: 32px;
       max-width: 270px;
+      padding: 96px 24px 0;
+      width: 100%;
     }
   }
 
