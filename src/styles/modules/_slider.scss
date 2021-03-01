@@ -1,0 +1,79 @@
+.slider {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    background-color: $color-black;
+    width: 100%;
+    max-width: 735px;
+    z-index: 6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 152px 125px 0 165px;
+  }
+
+  &__title {
+    @include font($Commissioner, 800, 56, 1.14);
+
+    color: $color-white;
+    margin: 0 0 52px;
+  }
+
+  &__arrows {
+    margin-bottom: 152px;
+  }
+
+  &__arrow-previous {
+    margin-right: 15px;
+  }
+
+  &__wave {
+    position: relative;
+    top: -330px;
+    left: 495px;
+  }
+
+  &__image-slide {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 895px;
+    display: block;
+    margin-left: auto;
+  }
+
+  &__text {
+    position: absolute;
+    color: $color-white;
+    text-align: right;
+    width: 100%;
+    bottom: 68px;
+  }
+
+  &__name {
+    @include font($Commissioner, 800, 20, 1.6);
+
+    margin: 0 154px 0;
+  }
+
+  &__date {
+    @include font($Commissioner, 400, 18, 1.78);
+
+    margin: 0 154px 0 0;
+  }
+}
