@@ -8,6 +8,12 @@
     max-width: 1440px;
     position: relative;
     width: 100%;
+
+    @include mq-until(768) {
+      display: flex;
+      flex-direction: column;
+      background-color: $color-red;
+    }
   }
 
   &__content {
@@ -32,6 +38,11 @@
       padding: 130px 40px 124px 59px;
       top: -50px;
       width: 100%;
+    }
+
+    @include mq-until(768) {
+      padding: 0 24px 96px;
+      margin-top: 309px;
     }
   }
 
@@ -62,6 +73,14 @@
       max-width: 300px;
       padding: 230px 58px 39px;
       width: 100%;
+    }
+
+    @include mq-until(768) {
+      padding: 96px 24px 0;
+      font-size: 32px;
+      color: $color-white;
+      width: 100%;
+      max-width: 270px;
     }
   }
 
@@ -97,6 +116,10 @@
     @include mq-between(768, 992) {
       left: 0;
       top: -42px;
+    }
+
+    @include mq-until(768) {
+      left: 0;
     }
   }
 
