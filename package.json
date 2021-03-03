@@ -8,6 +8,7 @@
     "build": "rimraf .dist && webpack",
     "lint:styles": "stylelint \"src/styles/**/*.scss\" --fix",
     "lint:js": "eslint src/js --ext .js",
+    "lintFix:js": "eslint src/js --ext .js --fix",
     "lint": "npm run lint:styles && npm run lint:js"
   },
   "dependencies": {
