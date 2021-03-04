@@ -8,6 +8,12 @@
     max-width: 1440px;
     position: relative;
     width: 100%;
+
+    @include mq-until(768) {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+    }
   }
 
   &__content {
@@ -32,6 +38,13 @@
       padding: 100px 80px 0 80px;
       width: 100%;
     }
+
+    @include mq-until(768) {
+      max-width: 800px;
+      padding: 64px 24px 0;
+      position: relative;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -44,8 +57,13 @@
       font-size: rem-calc(45);
     }
 
-    @include mq-between(768, 992) {
+    @include mq-until(992) {
       font-size: rem-calc(32);
+    }
+
+    @include mq-until(768) {
+      max-width: 250px;
+      width: 100%;
     }
   }
 
@@ -57,6 +75,10 @@
     }
     @include mq-between(768, 992) {
       margin-bottom: 80px;
+    }
+
+    @include mq-until(768) {
+      margin-bottom: 65px;
     }
   }
 
@@ -80,6 +102,10 @@
       top: -210px;
       width: 60px;
     }
+
+    @include mq-until(768) {
+      display: none;
+    }
   }
 
   &__image-slide {
@@ -91,6 +117,10 @@
     position: absolute;
     transition: all 1.5s ease-out;
     width: 100%;
+
+    @include mq-until(768) {
+      position: relative;
+    }
   }
 
   &__image {
@@ -116,7 +146,7 @@
   }
 
   &__text {
-    bottom: 68px;
+    bottom: 35px;
     color: $color-white;
     position: absolute;
     text-align: right;
@@ -133,6 +163,11 @@
     @include mq-between(768, 992) {
       margin: 0 50px 0;
     }
+
+    @include mq-until(768) {
+      font-size: rem-calc(15);
+      margin: 0 24px 0;
+    }
   }
 
   &__date {
@@ -141,10 +176,14 @@
     margin: 0 154px 0 0;
     @include mq-between(992, 1200) {
       margin: 0 100px 0;
+    }
+    @include mq-between(768, 992) {
+      margin: 0 50px 0 0;
+    }
 
-      @include mq-between(768, 992) {
-        margin: 0 50px 0;
-      }
+    @include mq-until(768) {
+      font-size: rem-calc(15);
+      margin: 0 24px 0 0;
     }
   }
 }
