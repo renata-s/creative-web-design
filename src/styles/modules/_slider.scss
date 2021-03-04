@@ -20,6 +20,18 @@
     top: 0;
     width: 100%;
     z-index: 6;
+
+    @include mq-between(992, 1200) {
+      max-width: 550px;
+      padding: 130px 100px 0 100px;
+      width: 100%;
+    }
+
+    @include mq-between(768, 992) {
+      max-width: 420px;
+      padding: 100px 80px 0 80px;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -27,10 +39,25 @@
 
     color: $color-white;
     margin: 0 0 52px;
+
+    @include mq-between(992, 1200) {
+      font-size: rem-calc(45);
+    }
+
+    @include mq-between(768, 992) {
+      font-size: rem-calc(32);
+    }
   }
 
   &__arrows {
     margin-bottom: 152px;
+
+    @include mq-between(992, 1200) {
+      margin-bottom: 130px;
+    }
+    @include mq-between(768, 992) {
+      margin-bottom: 80px;
+    }
   }
 
   &__arrow-previous {
@@ -41,10 +68,23 @@
     left: 495px;
     position: relative;
     top: -330px;
+
+    @include mq-between(992, 1200) {
+      left: 410px;
+      top: -285px;
+      width: 80px;
+    }
+
+    @include mq-between(768, 992) {
+      left: 310px;
+      top: -210px;
+      width: 60px;
+    }
   }
 
   &__image-slide {
     align-items: flex-end;
+    display: flex;
     height: 0;
     opacity: 0.4;
     overflow: hidden;
@@ -58,6 +98,16 @@
     margin-left: auto;
     max-width: 895px;
     width: 100%;
+
+    @include mq-between(992, 1200) {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    @include mq-between(768, 992) {
+      max-width: 600px;
+      width: 100%;
+    }
   }
 
   &__active {
@@ -77,11 +127,24 @@
     @include font($Commissioner, 800, 20, 1.6);
 
     margin: 0 154px 0;
+    @include mq-between(992, 1200) {
+      margin: 0 100px 0;
+    }
+    @include mq-between(768, 992) {
+      margin: 0 50px 0;
+    }
   }
 
   &__date {
     @include font($Commissioner, 400, 18, 1.78);
 
     margin: 0 154px 0 0;
+    @include mq-between(992, 1200) {
+      margin: 0 100px 0;
+
+      @include mq-between(768, 992) {
+        margin: 0 50px 0;
+      }
+    }
   }
 }
