@@ -4,10 +4,19 @@
 
   &__wrapper {
     display: flex;
+    height: 728px;
     justify-content: space-between;
     max-width: 1440px;
     position: relative;
     width: 100%;
+
+    @include mq-between(992, 1200) {
+      height: 650px;
+    }
+
+    @include mq-between(768, 992) {
+      height: 488px;
+    }
 
     @include mq-until(768) {
       display: flex;

@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 368px;
+  z-index: 7;
+
+  &__wrapper {
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include font($Commissioner, 800, 56, 1.14);
+
+    width: 100%;
+    max-width: 600px;
+    padding-left: 165px;
+  }
+
+  &__wave {
+    position: absolute;
+    left: -60px;
+  }
+
+  &__button {
+    @include button($color-white, $color-red);
+
+    margin-right: 165px;
+
+    &:hover {
+      background-color: $color-light-red;
+    }
+  }
+}
