@@ -3,7 +3,6 @@
   justify-content: center;
   position: relative;
   height: 368px;
-  z-index: 7;
 
   &__wrapper {
     background-color: $color-white;
@@ -22,17 +21,32 @@
     width: 100%;
     max-width: 600px;
     padding-left: 165px;
+
+    @include mq-between(768, 1200) {
+      padding-left: 39px;
+      font-size: rem-calc(32);
+      width: 100%;
+      max-width: 350px;
+    }
   }
 
   &__wave {
     position: absolute;
     left: -60px;
+
+    @include mq-until(1200) {
+      display: none;
+    }
   }
 
   &__button {
     @include button($color-white, $color-red);
 
     margin-right: 165px;
+
+    @include mq-between(768, 1200) {
+      margin-right: 40px;
+    }
 
     &:hover {
       background-color: $color-light-red;
