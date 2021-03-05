@@ -74,13 +74,13 @@
     width: 100%;
 
     @include mq-between(768, 1100) {
-      font-size: 45px;
+      font-size: rem-calc(45);
       max-width: 300px;
       width: 100%;
     }
 
     @include mq-until(768) {
-      font-size: 30px;
+      font-size: rem-calc(30);
       margin: 0;
       padding: 72px 0 24px;
     }
@@ -102,14 +102,13 @@
     }
 
     @include mq-between(768, 992) {
-      font-size: 15px;
+      font-size: rem-calc(15);
       margin: 0 0 32px 0;
       max-width: 300px;
       width: 100%;
     }
 
     @include mq-until(768) {
-      font-size: 15px;
       margin: 0 0 32px 0;
       max-width: 400px;
       width: 100%;
@@ -119,7 +118,7 @@
   &__button {
     @include button($color-red, $color-black);
 
-    font-size: 18px;
+    font-size: rem-calc(18);
     font-size: 800;
     text-align: left;
 

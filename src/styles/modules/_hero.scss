@@ -46,15 +46,15 @@
     width: 600px;
 
     @include mq-between(768, 1100) {
-      @include font($Commissioner, 800, 56, 1);
-
+      font-size: rem-calc(56);
+      line-height: 1;
       margin: 0 0 19px 39px;
       width: 400px;
     }
 
     @include mq-until(768) {
-      @include font($Commissioner, 800, 40, 1);
-
+      font-size: rem-calc(40);
+      line-height: 1;
       margin: 0;
       max-width: 327px;
       padding: 56px 0 15px 0;
@@ -71,8 +71,8 @@
     width: 100%;
 
     @include mq-between(768, 1100) {
-      @include font($Commissioner, 400, 15, 1.67);
-
+      font-size: rem-calc(15);
+      line-height: 1.67;
       margin: 0 0 0 39px;
       width: 400px;
     }

@@ -64,12 +64,12 @@
     width: 100%;
 
     @include mq-between(992, 1200) {
-      font-size: 48px;
+      font-size: rem-calc(48);
       padding-top: 230px;
     }
 
     @include mq-between(768, 992) {
-      font-size: 32px;
+      font-size: rem-calc(32);
       max-width: 300px;
       padding: 230px 58px 39px;
       width: 100%;
@@ -77,7 +77,7 @@
 
     @include mq-until(768) {
       color: $color-white;
-      font-size: 32px;
+      font-size: rem-calc(32);
       max-width: 270px;
       padding: 96px 24px 0;
       width: 100%;
@@ -101,7 +101,7 @@
     text-transform: capitalize;
 
     @include mq-between(768, 992) {
-      font-size: 16px;
+      font-size: rem-calc(16);
     }
   }
 
@@ -132,7 +132,7 @@
     width: 100%;
 
     @include mq-between(768, 992) {
-      font-size: 16px;
+      font-size: rem-calc(16);
     }
   }
 }

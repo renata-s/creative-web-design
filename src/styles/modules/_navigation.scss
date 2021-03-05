@@ -75,14 +75,14 @@
     }
 
     @include mq-until(768) {
-      @include font($Commissioner, 400, 18, 1.75);
-
+      font-size: rem-calc(18);
+      line-height: 1.75;
       margin: 0;
     }
 
     &:hover,
     &:focus {
-      font-weight: 600;
+      font-weight: 500;
     }
 
     &::before,
