@@ -6,11 +6,11 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding: 0;
   margin: 0;
-  width: 50px;
-  position: relative;
   outline: none;
+  padding: 0;
+  position: relative;
+  width: 50px;
 
   &:focus {
     border: 1px solid $color-black;
