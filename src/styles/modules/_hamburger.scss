@@ -7,7 +7,15 @@
   display: flex;
   justify-content: center;
   padding: 0;
+  margin: 0;
   width: 50px;
+  position: relative;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $color-black;
+    border-radius: 50%;
+  }
 
   @include mq-from(768) {
     display: none;
@@ -52,7 +60,7 @@
   }
 
   &__line1 {
-    stroke-dasharray: 50 167;
+    stroke-dasharray: 60 167;
     stroke-width: 3;
 
     &--opened {
@@ -63,7 +71,7 @@
   }
 
   &__line2 {
-    stroke-dasharray: 50 50;
+    stroke-dasharray: 60 50;
     stroke-width: 3;
 
     &--opened {
@@ -74,7 +82,7 @@
   }
 
   &__line3 {
-    stroke-dasharray: 50 167;
+    stroke-dasharray: 60 167;
     stroke-width: 3;
 
     &--opened {
